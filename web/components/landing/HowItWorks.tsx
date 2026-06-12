@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Kicker } from "../ui/Kicker";
-import { Reveal } from "../ui/Reveal";
 
 const STEPS = [
   {
@@ -30,44 +29,38 @@ export function HowItWorks() {
   return (
     <section className="border-y border-ink/10 bg-paper-warm">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <Reveal>
-          <Kicker>Work order</Kicker>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
-            How the pilot works
-          </h2>
-        </Reveal>
+        <Kicker>Work order</Kicker>
+        <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+          How the pilot works
+        </h2>
         <ol className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
-          {STEPS.map((s, i) => (
-            <Reveal key={s.n} delay={i * 0.1}>
-              <li className="relative">
-                <p className="font-mono text-5xl font-semibold text-ink/15">
-                  {s.n}
-                </p>
-                <h3 className="mt-2 text-xl font-bold text-ink">{s.title}</h3>
-                <p className="mt-2 leading-relaxed text-ink-soft">{s.body}</p>
-              </li>
-            </Reveal>
+          {STEPS.map((s) => (
+            <li key={s.n} className="relative">
+              <p className="font-mono text-5xl font-semibold text-ink/15">
+                {s.n}
+              </p>
+              <h3 className="mt-2 text-xl font-bold text-ink">{s.title}</h3>
+              <p className="mt-2 leading-relaxed text-ink-soft">{s.body}</p>
+            </li>
           ))}
         </ol>
-        <Reveal delay={0.15}>
-          <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3">
-            {ARTIFACT_LINKS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="group font-semibold text-work transition-colors hover:text-work-deep"
+        <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3">
+          {ARTIFACT_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="group font-semibold text-work transition-colors hover:text-work-deep"
+            >
+              {l.label}{" "}
+              <span
+                aria-hidden="true"
+                className="inline-block transition-transform group-hover:translate-x-1"
               >
-                {l.label}{" "}
-                <span
-                  aria-hidden="true"
-                  className="inline-block transition-transform group-hover:translate-x-1"
-                >
-                  →
-                </span>
-              </Link>
-            ))}
-          </div>
-        </Reveal>
+                →
+              </span>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

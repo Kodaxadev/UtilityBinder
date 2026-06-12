@@ -1,0 +1,172 @@
+[
+  {
+    "bodyHeight": 4713,
+    "clientWidth": 1265,
+    "h1": "Know what to shut off when Dave isn’t there.",
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "UtilityBinder — Know what to shut off when Dave isn't there",
+    "url": "http://localhost:3000/",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\01-home-desktop-first-fold.png",
+      "bytes": 91008
+    }
+  },
+  {
+    "bodyHeight": 8116,
+    "clientWidth": 375,
+    "h1": "Know what to shut off when Dave isn’t there.",
+    "overflowX": false,
+    "scrollWidth": 375,
+    "title": "UtilityBinder — Know what to shut off when Dave isn't there",
+    "url": "http://localhost:3000/",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\02-home-mobile-first-fold.png",
+      "bytes": 54731
+    }
+  },
+  {
+    "bodyHeight": 4713,
+    "clientWidth": 1265,
+    "h1": "Know what to shut off when Dave isn’t there.",
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "UtilityBinder — Know what to shut off when Dave isn't there",
+    "url": "http://localhost:3000/",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\03-home-proof-section.png",
+      "bytes": 82219
+    }
+  },
+  {
+    "bodyHeight": 4713,
+    "clientWidth": 1265,
+    "h1": "Know what to shut off when Dave isn’t there.",
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "UtilityBinder — Know what to shut off when Dave isn't there",
+    "url": "http://localhost:3000/",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\04-home-pricing-section.png",
+      "bytes": 55033
+    }
+  },
+  {
+    "bodyHeight": 8116,
+    "clientWidth": 375,
+    "h1": "Know what to shut off when Dave isn’t there.",
+    "overflowX": false,
+    "scrollWidth": 375,
+    "title": "UtilityBinder — Know what to shut off when Dave isn't there",
+    "url": "http://localhost:3000/#pilot",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\05-intake-mobile.png",
+      "bytes": 33410
+    }
+  },
+  {
+    "bodyHeight": 1468,
+    "clientWidth": 1265,
+    "h1": "Staff Emergency Map",
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "Staff Emergency Map — live demo | UtilityBinder",
+    "url": "http://localhost:3000/demo",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\06-demo-desktop.png",
+      "bytes": 84573
+    }
+  },
+  {
+    "bodyHeight": 2438,
+    "clientWidth": 375,
+    "h1": "Staff Emergency Map",
+    "overflowX": false,
+    "scrollWidth": 375,
+    "title": "Staff Emergency Map — live demo | UtilityBinder",
+    "url": "http://localhost:3000/demo",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\07-demo-mobile.png",
+      "bytes": 53997
+    }
+  },
+  {
+    "bodyHeight": 4324,
+    "clientWidth": 1265,
+    "h1": "The UtilityBinder Emergency PDF",
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "Sample UtilityBinder Emergency PDF | UtilityBinder",
+    "url": "http://localhost:3000/sample/emergency-pdf",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\08-sample-pdf-desktop.png",
+      "bytes": 82934
+    }
+  },
+  {
+    "bodyHeight": 2098,
+    "clientWidth": 1265,
+    "h1": "The Dave Sheet",
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "The Dave Sheet — knowledge capture worksheet | UtilityBinder",
+    "url": "http://localhost:3000/sample/dave-sheet",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\09-dave-sheet-desktop.png",
+      "bytes": 75536
+    }
+  },
+  {
+    "bodyHeight": 1220,
+    "clientWidth": 375,
+    "h1": "No record at this location.",
+    "overflowX": false,
+    "scrollWidth": 375,
+    "title": "UtilityBinder — Know what to shut off when Dave isn't there",
+    "url": "http://localhost:3000/does-not-exist",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "screenshot": {
+      "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\site-ux-2026-06-12\\10-404-mobile.png",
+      "bytes": 31653
+    }
+  }
+]

@@ -1,5 +1,4 @@
 import { Kicker } from "../ui/Kicker";
-import { Reveal } from "../ui/Reveal";
 
 const PROMISES = [
   {
@@ -20,20 +19,16 @@ export function TrustSection() {
   return (
     <section className="plat-grid bg-asphalt text-paper">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <Reveal>
-          <Kicker tone="paper">Straight answers</Kicker>
-          <h2 className="mt-3 max-w-2xl text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Built like the tools you already trust: no tricks, no lock-in.
-          </h2>
-        </Reveal>
+        <Kicker tone="paper">Straight answers</Kicker>
+        <h2 className="mt-3 max-w-2xl text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Built like the tools you already trust: no tricks, no lock-in.
+        </h2>
         <div className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
-          {PROMISES.map((p, i) => (
-            <Reveal key={p.title} delay={i * 0.1}>
-              <div className="border-t-2 border-caution pt-4">
-                <h3 className="text-lg font-bold">{p.title}</h3>
-                <p className="mt-2 leading-relaxed text-paper/70">{p.body}</p>
-              </div>
-            </Reveal>
+          {PROMISES.map((p) => (
+            <div key={p.title} className="border-t-2 border-caution pt-4">
+              <h3 className="text-lg font-bold">{p.title}</h3>
+              <p className="mt-2 leading-relaxed text-paper/80">{p.body}</p>
+            </div>
           ))}
         </div>
       </div>

@@ -6,7 +6,12 @@ import { TrustSection } from "@/components/landing/TrustSection";
 import { Pricing } from "@/components/landing/Pricing";
 import { IntakeForm } from "@/components/landing/IntakeForm";
 import { Kicker } from "@/components/ui/Kicker";
-import { Reveal } from "@/components/ui/Reveal";
+
+const REVIEW_STEPS = [
+  "Send the form — a phone photo of your paper map is plenty.",
+  "We take a first look and call you for 15 minutes. Free, no obligation.",
+  "If it's a fit, we book the $499 pilot. If it isn't, we'll say so and point you somewhere better.",
+];
 
 export default function Home() {
   return (
@@ -20,22 +25,28 @@ export default function Home() {
         <TrustSection />
         <section id="pilot" className="scroll-mt-20 bg-paper-warm">
           <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
-            <Reveal>
-              <Kicker>Start here</Kicker>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
-                Request the Emergency Utility Map Pilot
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-                Tell us about your property. These answers double as the first
-                15 minutes of your onboarding call — and there&rsquo;s no
-                commitment until we&rsquo;ve both agreed it&rsquo;s a fit.
-              </p>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="mt-10">
-                <IntakeForm />
-              </div>
-            </Reveal>
+            <Kicker>Start small — free review first</Kicker>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+              Send your map. We&rsquo;ll take the first look — free.
+            </h2>
+            <ol className="mt-6 space-y-2.5">
+              {REVIEW_STEPS.map((step, i) => (
+                <li key={step} className="flex gap-3 text-ink-soft">
+                  <span className="font-mono text-sm font-bold text-work">
+                    {i + 1}.
+                  </span>
+                  <span className="leading-relaxed">{step}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-5 text-sm leading-relaxed text-ink-soft">
+              Your answers below double as the first 15 minutes of that call —
+              nothing here commits you to anything, and what you send stays
+              private.
+            </p>
+            <div className="mt-9">
+              <IntakeForm />
+            </div>
           </div>
         </section>
       </main>

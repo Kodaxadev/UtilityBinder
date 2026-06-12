@@ -25,10 +25,10 @@
   --color-work: #1d56c0;
   --color-work-deep: #16409a;
 
-  /* Ink ramp on paper */
+  /* Ink ramp on paper — ink-faint passes 4.5:1 on paper (a11y audit fix) */
   --color-ink: #1f1b16;
-  --color-ink-soft: #57514a;
-  --color-ink-faint: #8b8478;
+  --color-ink-soft: #524c44;
+  --color-ink-faint: #6e6759;
 }
 
 /* Light-first, print-first brand: no dark scheme override (ADR-0002 legibility).

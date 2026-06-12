@@ -213,7 +213,7 @@ const eventNotes: EventNote[] = [
 export const BIG_PINE: PropertyRecord = {
   name: "Big Pine Family Campground (fictional demo)",
   // Query param versions the cached drawing — bump when plan-layout.ts changes.
-  planImage: "/plan.svg?rev=2",
+  planImage: "/plan?rev=3",
   planWidth: PLAN_W,
   planHeight: PLAN_H,
   sites,

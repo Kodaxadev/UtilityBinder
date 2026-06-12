@@ -16,6 +16,8 @@ const MAP_OPTIONS = ["No map", "Paper map", "PDF / scan", "Google Earth pins", "
 
 type Status = "idle" | "sending" | "ok" | "error";
 
+const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+
 const field =
   "w-full rounded-md border border-ink/20 bg-white px-3 py-2.5 text-sm text-ink shadow-sm transition-colors placeholder:text-ink-faint focus:border-work focus:outline-none focus:ring-2 focus:ring-work/25";
 const label = "block text-sm font-semibold text-ink";
@@ -65,8 +67,8 @@ export function IntakeForm() {
           Got it — thank you.
         </p>
         <p className="mx-auto mt-3 max-w-md text-ink-soft">
-          We&rsquo;ll reach out within two business days to set up a 15-minute
-          call. Have your map (or a phone photo of it) handy.
+          We&rsquo;ll reach out within two business days to set up your free
+          15-minute review. Have your map (or a phone photo of it) handy.
         </p>
       </div>
     );
@@ -148,14 +150,24 @@ export function IntakeForm() {
           disabled={status === "sending"}
           className="rounded-md bg-caution px-7 py-3.5 text-base font-extrabold text-asphalt shadow-sm transition-transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
         >
-          {status === "sending" ? "Sending…" : "Request the $499 pilot"}
+          {status === "sending" ? "Sending…" : "Request my free map review"}
         </button>
-        {status === "error" && (
-          <p className="text-sm font-semibold text-red-700">
-            Something went wrong — please email us directly instead.
-          </p>
-        )}
+        <p className="text-sm text-ink-soft">
+          Free review · no obligation · reply within 2 business days
+        </p>
       </div>
+      {status === "error" && (
+        <p className="text-sm font-semibold text-red-700" role="alert">
+          The form couldn&rsquo;t send right now.{" "}
+          {CONTACT_EMAIL ? (
+            <a href={`mailto:${CONTACT_EMAIL}?subject=UtilityBinder map review`} className="underline">
+              Email us at {CONTACT_EMAIL} instead
+            </a>
+          ) : (
+            "Please try again in a few minutes."
+          )}
+        </p>
+      )}
       <SafetyLine />
     </form>
   );

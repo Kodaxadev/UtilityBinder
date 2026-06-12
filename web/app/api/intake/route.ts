@@ -69,13 +69,23 @@ export async function POST(request: Request) {
       body: JSON.stringify(record),
     });
     if (!res.ok) {
-      console.error(`[intake] webhook responded ${res.status}`);
+      console.error(
+        `[intake] webhook responded ${res.status}; payload:`,
+        JSON.stringify(record),
+      );
       return Response.json({ error: "Storage failed" }, { status: 502 });
     }
+  } else if (process.env.NODE_ENV === "production") {
+    // Fail visibly: a lead must never see success while landing only in
+    // logs. The payload is still logged as a last-resort recovery path.
+    console.error(
+      "[intake] INTAKE_WEBHOOK_URL not set in production — rejecting. Payload:",
+      JSON.stringify(record),
+    );
+    return Response.json({ error: "Intake unavailable" }, { status: 503 });
   } else {
     console.warn(
-      "[intake] INTAKE_WEBHOOK_URL not set — submission logged only.",
-      JSON.stringify(record),
+      "[intake] INTAKE_WEBHOOK_URL not set — dev mode, writing to data/intake.jsonl only.",
     );
   }
 

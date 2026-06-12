@@ -49,11 +49,12 @@ All desk-research assumptions verified or corrected (one correction was itself r
 - [Go-to-market plan](docs/gtm/go-to-market.md) — offer ladder, channels, 30/60/90, financial sketch
 - [Discovery kit](docs/gtm/discovery-kit.md) — outreach copy, interview script, **pass thresholds and kill criteria (the governing gate)**
 
-## Deployment
+## Deployment (one model — dashboard Root Directory)
 
-- **App lives in [web/](web/)** (Next.js 16). When linking this repo in Vercel, set **Root Directory = `web`** — framework auto-detects.
-- **Required env var (Production):** `INTAKE_WEBHOOK_URL` — JSON POST target for intake submissions (see [web/.env.example](web/.env.example)). Without it, leads only appear in server logs.
-- **Domain:** `utilitybinder.kodaxa.dev` (add in Vercel → Domains after linking).
+- **App lives in [web/](web/)** (Next.js 16). The Vercel project (`utility-binder`) must have **Root Directory = `web`** in Settings → Build and Deployment. [web/vercel.json](web/vercel.json) pins `framework: nextjs` in-repo (Vercel reads it once Root Directory is set). There is deliberately **no root-level vercel.json** — a legacy `builds` entry there would make dashboard settings ignored.
+- **Build-skip gotcha:** with Root Directory set, Vercel's default "Automatic" ignored-build-step **skips builds for commits that don't touch `web/**`** (empty commits, docs-only changes) and reuses the previous output. If a deploy looks instant with no logs, that's why — push a change inside `web/` or use "Redeploy" with cache off.
+- **Required env vars (Production):** `INTAKE_WEBHOOK_URL` — JSON POST target for intake submissions; the API returns **503 without it** so leads are never silently dropped. Recommended: `NEXT_PUBLIC_CONTACT_EMAIL` for the form's email fallback. See [web/.env.example](web/.env.example).
+- **Domain:** `utilitybinder.kodaxa.dev` (added in Vercel → Domains).
 - **CI:** [.github/workflows/ci.yml](.github/workflows/ci.yml) runs `npm ci` → audit (high+) → lint → build on pushes/PRs to `main`. Deploys are Vercel's GitHub integration, not Actions.
 - Real pilot/customer data never enters this repo — `web/data/` and all `.env*` files are gitignored; demo data is fictional by design.
 

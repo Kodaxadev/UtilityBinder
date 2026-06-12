@@ -110,7 +110,7 @@ Multiple search attempts did not re-find the claimed forum/Reddit post ("keep ac
 
 ## 11. Naming — ❌ Unverified
 
-"SiteSentry" was rejected: plausible collisions in the crowded site-monitoring/security naming space. After a naming review (candidates and verdicts in [ADR-0009](../adr/ADR-0009-naming-trademark.md)), **"UtilityBinder" was adopted** — a light web screen shows no exact-match software competitor (results are mostly physical tackle/fishing binder products). A formal USPTO Trademark Search knockout (TESS is retired; use `CM:"utility binder"` + expanded variants, classes 9 & 42) is still required before anything is printed or filed.
+"SiteSentry" was rejected: plausible collisions in the crowded site-monitoring/security naming space. After a naming review (candidates and verdicts in [ADR-0009](../adr/ADR-0009-naming-trademark.md)), **"UtilityBinder" was adopted**. **Knockout executed 2026-06-11: USPTO Trademark Search wordmark query returned 0 results — name cleared** for pilot use, printed materials, and LLC/DBA (see ADR-0009 update note). Revisit mark strength only if/when marketing scales.
 
 ---
 

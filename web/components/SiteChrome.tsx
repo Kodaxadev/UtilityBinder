@@ -57,7 +57,7 @@ export function SiteFooter() {
                 Utility<span className="text-caution">Binder</span>
               </span>
             </p>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-paper/70">
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-paper/80">
               Emergency utility records for the things only your maintenance
               person knows. Built for independent campgrounds, RV parks, and
               outdoor properties.
@@ -84,8 +84,8 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-10 border-t border-paper/15 pt-6">
-          <SafetyLine className="!text-paper/55" />
-          <p className="mt-3 font-mono text-xs text-paper/40">
+          <SafetyLine className="!text-paper/70" />
+          <p className="mt-3 font-mono text-xs text-paper/60">
             © 2026 UtilityBinder · Demo content uses fictional data only
           </p>
         </div>

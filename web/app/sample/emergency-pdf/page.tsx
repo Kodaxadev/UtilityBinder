@@ -29,7 +29,8 @@ export default function SampleEmergencyPdfPage() {
             This is the artifact that goes on the shop wall, laminated by the
             door, and in the truck glovebox. Use your browser&rsquo;s print
             dialog (or the button) to see the real thing — the watermark and
-            disclaimers print on every page and cannot be removed.
+            safety disclaimers are built into every page of the template by
+            design.
           </p>
           <div className="mt-5 flex items-center gap-4">
             <PrintButton />

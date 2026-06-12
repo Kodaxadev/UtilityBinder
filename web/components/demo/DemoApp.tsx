@@ -124,7 +124,8 @@ export function DemoApp() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_400px]">
-        <div className="space-y-3">
+        {/* Mobile: search + results first (payoff before controls); desktop: map left */}
+        <div className="order-2 space-y-3 lg:order-1">
           <MapLegend active={activeUtilities} onToggle={toggleUtility} />
           <EmergencyMap
             selectedSiteId={selectedSiteId}
@@ -144,7 +145,7 @@ export function DemoApp() {
             record
           </p>
         </div>
-        <div className="space-y-4">
+        <div className="order-1 space-y-4 lg:order-2">
           <div className="rounded-lg bg-asphalt p-4">
             <label className="block">
               <span className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-caution">

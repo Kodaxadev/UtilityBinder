@@ -1,5 +1,4 @@
 import { Kicker } from "../ui/Kicker";
-import { Reveal } from "../ui/Reveal";
 
 const TIERS = [
   {
@@ -26,27 +25,25 @@ const TIERS = [
 
 export function Pricing() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-      <Reveal>
-        <Kicker>Plain pricing</Kicker>
-        <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
-          One locate visit&rsquo;s money. Knowledge that stays.
-        </h2>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-          After the pilot: hosted Staff Emergency Map from{" "}
-          <span className="font-mono font-semibold text-ink">$29/mo</span>.
-          Laminated map + QR kit from{" "}
-          <span className="font-mono font-semibold text-ink">$149</span>.
-          Annual verification walk from{" "}
-          <span className="font-mono font-semibold text-ink">$250</span>.{" "}
-          <strong className="text-ink">
-            Your data exports free, forever — even if you leave.
-          </strong>
-        </p>
-      </Reveal>
+    <section id="pricing" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
+      <Kicker>Plain pricing</Kicker>
+      <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+        One locate visit&rsquo;s money. Knowledge that stays.
+      </h2>
+      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
+        After the pilot: hosted Staff Emergency Map from{" "}
+        <span className="font-mono font-semibold text-ink">$29/mo</span>.
+        Laminated map + QR kit from{" "}
+        <span className="font-mono font-semibold text-ink">$149</span>.
+        Annual verification walk from{" "}
+        <span className="font-mono font-semibold text-ink">$250</span>.{" "}
+        <strong className="text-ink">
+          Your data exports free, forever — even if you leave.
+        </strong>
+      </p>
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
-        {TIERS.map((t, i) => (
-          <Reveal key={t.name} delay={i * 0.08} className="h-full">
+        {TIERS.map((t) => (
+          <div key={t.name} className="h-full">
             <div
               className={`relative flex h-full flex-col rounded-lg p-7 ${
                 t.featured
@@ -83,7 +80,7 @@ export function Pricing() {
                 </p>
               )}
             </div>
-          </Reveal>
+          </div>
         ))}
       </div>
     </section>

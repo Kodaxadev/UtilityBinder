@@ -29,16 +29,23 @@ export function Hero() {
               href="#pilot"
               className="rounded-md bg-caution px-6 py-3.5 text-base font-extrabold text-asphalt shadow-[0_0_0_1px_rgba(0,0,0,0.2),0_8px_24px_-8px_rgba(245,166,35,0.6)] transition-transform hover:scale-[1.03] active:scale-[0.98]"
             >
-              Get the $499 Pilot
+              Send your map — free 15-minute review
             </Link>
             <Link
-              href="/demo"
+              href="#pricing"
               className="rounded-md border border-paper/30 px-6 py-3.5 text-base font-bold text-paper transition-colors hover:border-caution hover:text-caution"
             >
-              Try the live demo
+              See pilot pricing
             </Link>
           </div>
-          <SafetyLine className="mt-7 max-w-xl !text-paper/45" />
+          <p className="mt-5 text-sm text-paper/80">
+            Or poke around first:{" "}
+            <Link href="/demo" className="font-semibold text-caution underline underline-offset-2 hover:text-paper">
+              try the live demo park
+            </Link>
+            . No signup for any of it.
+          </p>
+          <SafetyLine className="mt-6 max-w-xl !text-paper/65" />
         </div>
         <div className="flex justify-center lg:justify-end">
           <LaminatedCard />
