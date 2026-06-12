@@ -33,10 +33,10 @@ export function Pricing() {
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
         After the pilot: hosted Staff Emergency Map from{" "}
         <span className="font-mono font-semibold text-ink">$29/mo</span>.
-        Laminated map + QR kit from{" "}
-        <span className="font-mono font-semibold text-ink">$149</span>.
         Annual verification walk from{" "}
-        <span className="font-mono font-semibold text-ink">$250</span>.{" "}
+        <span className="font-mono font-semibold text-ink">$250</span>. Your
+        Emergency PDF comes print-shop-ready — laminate a copy at any office
+        store for a few dollars.{" "}
         <strong className="text-ink">
           Your data exports free, forever — even if you leave.
         </strong>

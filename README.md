@@ -52,6 +52,9 @@ All desk-research assumptions verified or corrected (one correction was itself r
 - [Interview questionnaire](docs/gtm/interview-questionnaire.md) — the call-ready 15-minute review-call instrument
 - [CRM runbook](docs/gtm/crm-runbook.md) — Zoho Bigin pipeline, field schema, intake-Flow wiring, weekly gate ritual ([ADR-0011](docs/adr/ADR-0011-crm-buy-not-build.md))
 
+### Ops
+- [Pilot fulfillment runbook](docs/ops/pilot-fulfillment-runbook.md) — intake→delivery for a solo operator: promise policy, file hygiene, workspace structure, SLAs, QA checklist, email templates; CSV capture templates in [docs/ops/templates/](docs/ops/templates/)
+
 ## Deployment (one model — dashboard Root Directory)
 
 - **App lives in [web/](web/)** (Next.js 16). The Vercel project (`utility-binder`) must have **Root Directory = `web`** in Settings → Build and Deployment. [web/vercel.json](web/vercel.json) pins `framework: nextjs` in-repo (Vercel reads it once Root Directory is set). There is deliberately **no root-level vercel.json** — a legacy `builds` entry there would make dashboard settings ignored.

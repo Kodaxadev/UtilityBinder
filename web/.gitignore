@@ -45,3 +45,8 @@ next-env.d.ts
 /data/
 
 .vercel
+
+# Real pilot data: local-only, never committed (see docs/ops/pilot-fulfillment-runbook.md)
+*.local.ts
+*.local.tsx
+

@@ -15,7 +15,7 @@ Independent campgrounds/RV parks own private utility networks that 811 will neve
 | **Emergency Utility Map Pilot** (≤75 sites, ≤40 assets, UtilityBinder Emergency PDF + Staff Emergency Map + Dave Sheet) | **$499** | Default offer; the validation instrument ([PRD-0001](../prd/PRD-0001-pilot-deliverable-package.md)) |
 | Map Conversion + Verification Walk (staff interview, confidence tagging, binder, QR draft) | $999 | Premium pilot / deeper learning |
 | Hosted staff map subscription | $29–49/mo | Retention proof; priced deliberately under PMS minimums (CampLife $99/mo) so it's an add-on, never a tradeoff |
-| QR + laminated emergency kit | $149–249 | Physical artifact margin |
+| QR + printed emergency kit | $149–249 | Physical artifact margin — printing/lamination outsourced to a local print shop (~$10–25 COGS); **not on the public site until pilot #1 is delivered** |
 | Annual verification walk / refresh | $250–750 | The renewal ritual; triggered by staleness report ([PRD-0003](../prd/PRD-0003-asset-dependency-capture.md)) |
 | Full export | $0 forever | Trust weapon ([ADR-0008](../adr/ADR-0008-export-first-no-lock-in.md)) |
 

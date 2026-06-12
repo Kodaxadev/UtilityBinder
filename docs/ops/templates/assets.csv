@@ -1,0 +1,2 @@
+id,label,asset_type,utility,plan_x,plan_y,location_text,status,notes,source,confidence,last_verified,recorded_by
+v-01,V-01,valve,water,168,92,"Main shutoff, green cover 10 ft east of well house door",active,"","tested",high,2026-06-12,"Dave (spring opening)"

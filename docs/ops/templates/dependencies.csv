@@ -1,0 +1,2 @@
+id,asset_id,relation,site_ids,notes,source,confidence,last_verified,recorded_by
+d-01,v-01,controls,"site-1;site-2;site-3","Whole-park water — also kills the bathhouse","tested",high,2026-06-12,Dave

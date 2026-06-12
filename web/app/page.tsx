@@ -42,7 +42,9 @@ export default function Home() {
             <p className="mt-5 text-sm leading-relaxed text-ink-soft">
               Your answers below double as the first 15 minutes of that call —
               nothing here commits you to anything, and what you send stays
-              private.
+              private. Every binder is built personally, one park at a time —
+              pilot slots are limited, and we&rsquo;ll give you a real
+              delivery date before you pay a dollar.
             </p>
             <div className="mt-9">
               <IntakeForm />
