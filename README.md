@@ -35,6 +35,7 @@ All desk-research assumptions verified or corrected (one correction was itself r
 | [0008](docs/adr/ADR-0008-export-first-no-lock-in.md) | Export-first; free full export forever |
 | [0009](docs/adr/ADR-0009-naming-trademark.md) | Naming: **UtilityBinder** adopted + brand architecture (Dave Sheet, Staff Emergency Map, Emergency Reference Packet); formal USPTO knockout before print |
 | [0010](docs/adr/ADR-0010-arc-facilities-boundary.md) | ARC Facilities boundary: outdoor site-dependency records only; no facility-document/enterprise territory |
+| [0011](docs/adr/ADR-0011-crm-buy-not-build.md) | CRM: buy not build — Zoho Bigin, loss reasons = kill-criteria taxonomy |
 
 ### PRDs (what gets built, in order)
 | # | Artifact | Gate |
@@ -48,6 +49,8 @@ All desk-research assumptions verified or corrected (one correction was itself r
 ### GTM
 - [Go-to-market plan](docs/gtm/go-to-market.md) — offer ladder, channels, 30/60/90, financial sketch
 - [Discovery kit](docs/gtm/discovery-kit.md) — outreach copy, interview script, **pass thresholds and kill criteria (the governing gate)**
+- [Interview questionnaire](docs/gtm/interview-questionnaire.md) — the call-ready 15-minute review-call instrument
+- [CRM runbook](docs/gtm/crm-runbook.md) — Zoho Bigin pipeline, field schema, intake-Flow wiring, weekly gate ritual ([ADR-0011](docs/adr/ADR-0011-crm-buy-not-build.md))
 
 ## Deployment (one model — dashboard Root Directory)
 

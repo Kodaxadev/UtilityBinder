@@ -17,7 +17,9 @@
 
 That last question alone generates interview conversations.
 
-## 2. Interview script (15 needed; record answers verbatim in tracker)
+## 2. Interview script (15 needed; record answers verbatim)
+
+> **Operational version:** the call-ready instrument with timing blocks, capture fields, scoring, and the ask lives in [interview-questionnaire.md](interview-questionnaire.md). The questions below are the canonical core; the questionnaire operationalizes them.
 
 1. "Who knows where everything is?" *(the Dave question)*
 2. "What happens when that person is off-site, sick, or gone?"
@@ -56,8 +58,8 @@ That last question alone generates interview conversations.
 
 Kill output: a one-page memo (what we believed, what we observed, what reusable assets remain — the engine, the artifacts, the channel learnings) before any re-aim decision.
 
-## 5. Discovery tracker columns
+## 5. Discovery tracking — the CRM
 
-`park • state • sites • age • PMS • map status • Dave answer • incident(s) verbatim • Q10 answer • temperature • next step • pilot $ • notes`
+Tracking lives in Zoho Bigin ([ADR-0011](../adr/ADR-0011-crm-buy-not-build.md)), wired to the website intake and the outreach CSV import — setup and field schema in [crm-runbook.md](crm-runbook.md). The pass thresholds (§3) and kill criteria (§4) are implemented as saved CRM views; the weekly ritual in the runbook keeps the counters honest.
 
 Keep verbatim quotes — they become landing-page copy and the case study after pilots.
