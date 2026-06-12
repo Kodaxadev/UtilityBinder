@@ -7,13 +7,25 @@ import { PageHeader } from "./PrintShell";
  * the same coordinates the live map uses, so print and screen agree.
  */
 export function PdfOverviewPage() {
-  const { planWidth, planHeight, assets } = BIG_PINE;
+  const { planWidth, planHeight, assets, sites } = BIG_PINE;
   return (
     <section className="pdf-page">
       <PageHeader title="Emergency Shutoff Map — Overview" property={BIG_PINE.name} />
       <div className="relative w-full overflow-hidden rounded border border-stone-300">
         {/* eslint-disable-next-line @next/next/no-img-element -- static plan, exact pixel space needed for pin overlay */}
         <img src={BIG_PINE.planImage} alt="Site plan" className="block w-full" />
+        {sites.map((site) => (
+          <span
+            key={site.id}
+            className="absolute -translate-x-1/2 -translate-y-1/2 rounded-sm border border-stone-800/35 bg-white/90 px-0.5 font-mono text-[6.5px] font-bold leading-none text-stone-900"
+            style={{
+              left: `${(site.position.x / planWidth) * 100}%`,
+              top: `${(site.position.y / planHeight) * 100}%`,
+            }}
+          >
+            {site.label}
+          </span>
+        ))}
         {assets.map((a) => (
           <div
             key={a.id}

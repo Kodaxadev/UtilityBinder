@@ -6,7 +6,7 @@ import "leaflet/dist/leaflet.css";
 import { BIG_PINE, dependenciesForSite } from "@/lib/demo-data";
 import { UTILITY_META } from "@/lib/utility-meta";
 import type { PlanPosition, UtilityType } from "@/lib/types";
-import { assetPinHtml, setPinActive } from "./map-markers";
+import { assetPinHtml, setPinActive, siteLabelHtml } from "./map-markers";
 
 interface Props {
   selectedSiteId: string | null;
@@ -57,15 +57,15 @@ export function EmergencyMap({
       ];
       const map = L.map(containerRef.current, {
         crs: L.CRS.Simple,
-        minZoom: -1,
+        minZoom: -2,
         maxZoom: 2,
-        zoomSnap: 0.25,
+        zoomSnap: 0,
         attributionControl: false,
       });
       L.imageOverlay(BIG_PINE.planImage, bounds).addTo(map);
       map.fitBounds(bounds);
 
-      // Site pads: invisible until hovered, so the drafting sheet stays clean.
+      // Site hit targets sit on the visible pads in the base image.
       for (const site of BIG_PINE.sites) {
         const { x, y } = site.position;
         const rect = L.rectangle(
@@ -77,6 +77,15 @@ export function EmergencyMap({
           .on("mouseover", () => rect.setStyle({ weight: 2, fillOpacity: 0.07 }))
           .on("mouseout", () => rect.setStyle({ weight: 0, fillOpacity: 0 }));
         pads.set(site.id, rect);
+        L.marker(toLatLng(site.position), {
+          interactive: false,
+          keyboard: false,
+          icon: L.divIcon({
+            className: "",
+            html: siteLabelHtml(site),
+            iconSize: [0, 0],
+          }),
+        }).addTo(map);
       }
 
       // Asset pins grouped per utility for layer filtering.
@@ -186,7 +195,7 @@ export function EmergencyMap({
   return (
     <div
       ref={containerRef}
-      className="h-[440px] w-full rounded-lg border border-ink/15 bg-[#f7f3e8] shadow-[inset_0_1px_4px_rgba(31,27,22,0.08)] sm:h-[540px]"
+      className="h-[320px] w-full rounded-lg border border-ink/15 bg-[#f7f3e8] shadow-[inset_0_1px_4px_rgba(31,27,22,0.08)] sm:aspect-[3/2] sm:h-auto"
       role="application"
       aria-label="Staff Emergency Map of Big Pine Family Campground (fictional demo)"
     />

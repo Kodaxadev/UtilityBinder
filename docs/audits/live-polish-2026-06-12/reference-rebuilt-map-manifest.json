@@ -1,0 +1,38 @@
+[
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\18-reference-rebuilt-demo-map-desktop.png",
+    "bytes": 81115,
+    "bodyText": "Skip to content UtilityBinder Live demo Sample PDF $499 Pilot LIVE DEMO · FICTIONAL DATA Staff Emergency Map This is Big Pine Family Campground — a fictional park with deliberately imperfect records, because honest provenance is the product. Some valves are verified and tested; one is on a 1998 paper map and has never been found. Your park looks like this too. Staff memory record — NOT a utility locate. Do not rely on this for excavation. Call 811 before digging; private lines may require a priv",
+    "clientWidth": 1265,
+    "imgSrc": "/plan?rev=4",
+    "markerCount": 14,
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "Staff Emergency Map — live demo | UtilityBinder",
+    "url": "http://127.0.0.1:3000/demo?mapcheck=2"
+  },
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\19-reference-rebuilt-demo-map-mobile.png",
+    "bytes": 47184,
+    "bodyText": "Skip to content UtilityBinder Live demo $499 Pilot LIVE DEMO · FICTIONAL DATA Staff Emergency Map This is Big Pine Family Campground — a fictional park with deliberately imperfect records, because honest provenance is the product. Some valves are verified and tested; one is on a 1998 paper map and has never been found. Your park looks like this too. Staff memory record — NOT a utility locate. Do not rely on this for excavation. Call 811 before digging; private lines may require a private utility",
+    "clientWidth": 375,
+    "imgSrc": "/plan?rev=4",
+    "markerCount": 14,
+    "overflowX": false,
+    "scrollWidth": 375,
+    "title": "Staff Emergency Map — live demo | UtilityBinder",
+    "url": "http://127.0.0.1:3000/demo?mapcheck=2"
+  },
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\20-reference-rebuilt-sample-pdf-map-desktop.png",
+    "bytes": 90301,
+    "bodyText": "Skip to content UtilityBinder Live demo Sample PDF $499 Pilot SAMPLE ARTIFACT · FICTIONAL DATA The UtilityBinder Emergency PDF This is the artifact that goes on the shop wall, laminated by the door, and in the truck glovebox. Use your browser’s print dialog (or the button) to see the real thing — the watermark and safety disclaimers are built into every page of the template by design. Print / Save as PDF Staff memory record — NOT a utility locate. Do not rely on this for excavation. Call 811 bef",
+    "clientWidth": 1265,
+    "imgSrc": "/plan?rev=4",
+    "markerCount": 0,
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "Sample UtilityBinder Emergency PDF | UtilityBinder",
+    "url": "http://127.0.0.1:3000/sample/emergency-pdf?mapcheck=2"
+  }
+]

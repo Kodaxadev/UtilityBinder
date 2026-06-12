@@ -1,0 +1,32 @@
+[
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\21-reference-rebuilt-demo-map-desktop-fresh.png",
+    "bytes": 82274,
+    "clientWidth": 1265,
+    "imgSrc": "/plan?rev=5",
+    "markerCount": 14,
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "url": "http://127.0.0.1:3000/demo?fresh=5"
+  },
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\22-reference-rebuilt-demo-map-mobile-fresh.png",
+    "bytes": 48000,
+    "clientWidth": 375,
+    "imgSrc": "/plan?rev=5",
+    "markerCount": 14,
+    "overflowX": false,
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:3000/demo?fresh=5"
+  },
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\23-reference-rebuilt-sample-pdf-map-desktop-fresh.png",
+    "bytes": 92748,
+    "clientWidth": 1265,
+    "imgSrc": "/plan?rev=5",
+    "markerCount": 0,
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "url": "http://127.0.0.1:3000/sample/emergency-pdf?fresh=5"
+  }
+]

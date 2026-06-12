@@ -1,0 +1,54 @@
+[
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\14-local-revised-demo-map-desktop.png",
+    "bytes": 81115,
+    "clientWidth": 1265,
+    "imgSrc": "/plan?rev=4",
+    "leafletReady": true,
+    "markerCount": 14,
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "Staff Emergency Map — live demo | UtilityBinder",
+    "url": "http://127.0.0.1:3000/demo",
+    "visibleText": "Skip to content UtilityBinder Live demo Sample PDF $499 Pilot LIVE DEMO · FICTIONAL DATA Staff Emergency Map This is Big Pine Family Campground — a fictional park with deliberately imperfect records, because honest provenance is the product"
+  },
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\15-local-revised-demo-map-mobile.png",
+    "bytes": 47184,
+    "clientWidth": 375,
+    "imgSrc": "/plan?rev=4",
+    "leafletReady": true,
+    "markerCount": 14,
+    "overflowX": false,
+    "scrollWidth": 375,
+    "title": "Staff Emergency Map — live demo | UtilityBinder",
+    "url": "http://127.0.0.1:3000/demo",
+    "visibleText": "Skip to content UtilityBinder Live demo $499 Pilot LIVE DEMO · FICTIONAL DATA Staff Emergency Map This is Big Pine Family Campground — a fictional park with deliberately imperfect records, because honest provenance is the product. Some valv"
+  },
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\16-local-revised-sample-pdf-map-desktop.png",
+    "bytes": 90301,
+    "clientWidth": 1265,
+    "imgSrc": "/plan?rev=4",
+    "leafletReady": false,
+    "markerCount": 0,
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "title": "Sample UtilityBinder Emergency PDF | UtilityBinder",
+    "url": "http://127.0.0.1:3000/sample/emergency-pdf",
+    "visibleText": "Skip to content UtilityBinder Live demo Sample PDF $499 Pilot SAMPLE ARTIFACT · FICTIONAL DATA The UtilityBinder Emergency PDF This is the artifact that goes on the shop wall, laminated by the door, and in the truck glovebox. Use your brows"
+  },
+  {
+    "file": "C:\\Users\\Justi\\Downloads\\Alpha\\SiteSentry\\docs\\audits\\live-polish-2026-06-12\\17-local-revised-sample-pdf-map-mobile.png",
+    "bytes": 61207,
+    "clientWidth": 375,
+    "imgSrc": "/plan?rev=4",
+    "leafletReady": false,
+    "markerCount": 0,
+    "overflowX": true,
+    "scrollWidth": 382,
+    "title": "Sample UtilityBinder Emergency PDF | UtilityBinder",
+    "url": "http://127.0.0.1:3000/sample/emergency-pdf",
+    "visibleText": "Skip to content UtilityBinder Live demo $499 Pilot SAMPLE ARTIFACT · FICTIONAL DATA The UtilityBinder Emergency PDF This is the artifact that goes on the shop wall, laminated by the door, and in the truck glovebox. Use your browser’s print "
+  }
+]

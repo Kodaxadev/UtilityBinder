@@ -19,6 +19,9 @@ web/data/
 # Claude Code local-only settings
 .claude/settings.local.json
 
+# Codex/Superpowers local preview sessions
+.superpowers/
+
 # OS noise
 .DS_Store
 Thumbs.db

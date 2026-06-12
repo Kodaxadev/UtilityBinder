@@ -116,6 +116,28 @@ body {
   z-index: 1000;
 }
 
+.ub-site-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  min-width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(31, 27, 22, 0.38);
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(31, 27, 22, 0.22);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
 /* Night mode — "2 a.m." display: invert the drafting sheet, glow the pins. */
 .map-night {
   background: #100f0c !important;
@@ -138,6 +160,12 @@ body {
   box-shadow:
     inset 0 0 0 1.5px rgba(250, 248, 244, 0.3),
     0 0 8px 1px var(--pin-c);
+}
+
+.map-night .ub-site-label {
+  background: rgba(24, 22, 17, 0.88);
+  border-color: rgba(250, 248, 244, 0.32);
+  color: var(--color-paper);
 }
 
 /* ---- Print artifact styles (ADR-0002: disclaimer/watermark structural) ---- */

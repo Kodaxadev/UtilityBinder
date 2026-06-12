@@ -10,7 +10,7 @@ Pre-pilot artifacts (per [ADR-0005](../docs/adr/ADR-0005-service-assisted-gtm.md
 | `/demo` | Staff Emergency Map demo — fictional Big Pine Family Campground ([PRD-0002](../docs/prd/PRD-0002-emergency-mode.md) in miniature) |
 | `/sample/emergency-pdf` | UtilityBinder Emergency PDF template — print via browser; watermark + disclaimers structural ([ADR-0002](../docs/adr/ADR-0002-liability-posture-not-a-locate.md)) |
 | `/sample/dave-sheet` | Dave Sheet knowledge-capture worksheet (printable) |
-| `/plan.svg` | Base site plan, generated from `lib/plan-layout.ts` (single source of truth with demo data) |
+| `/maps/big-pine-base-v1.png` | Illustrated demo base plan; labels and utility pins are deterministic overlays |
 | `/api/intake` | POST endpoint for the intake form |
 
 ## Run
@@ -30,7 +30,7 @@ npm run lint && npm run build   # verification
 
 - `lib/types.ts` mirrors the ADR-0006 primitives. **No depth/accuracy/tolerance fields — banned by ADR-0002 §4.**
 - `components/SafetyDisclaimer.tsx` is the only place disclaimer text lives; `components/print/PrintShell.tsx` injects watermark + footer band on every printed page (fixed-position elements repeat per page in Chromium — same engine as future server-side PDF generation).
-- Map is Leaflet 1.9 with `CRS.Simple` over the generated plan SVG — no tile servers, no imagery licensing. The plan renders as an engineering site plan (drafting grid, hatched structures, north arrow, scale bar, title block) from `lib/plan-layout.ts`; bump the `?rev=` query in `lib/demo-data.ts` `planImage` when the drawing changes (it is browser-cached for 1h).
+- Map is Leaflet 1.9 with `CRS.Simple` over a static illustrated base image in `public/maps/`. `lib/plan-layout.ts` now owns only the overlay coordinates, keeping site labels, click targets, asset pins, and print output aligned against the same `1200x800` plan space; bump the `?rev=` query in `lib/demo-data.ts` `planImage` when the image or overlay coordinates change. The map-art direction is tracked in `docs/audits/live-polish-2026-06-12/real-park-map-research.md`.
 - Demo interactions: scenario chips, per-utility layer toggles (the legend is functional), panel↔map hover sync, and a "2 a.m. mode" (CSS-invert night display). **Never let React control `className` on the Leaflet container div** — Leaflet adds runtime classes to it; night mode toggles a class imperatively for this reason.
 - **Design system ("field ledger"):** brand tokens live in `app/globals.css` `@theme` (paper/asphalt/caution/work/ink); type is Barlow (display+body) + IBM Plex Mono (anything that is a record: site numbers, stats, provenance, prices); dark is *sectional* (hero/footer asphalt), deliberately not a user theme — buyer is outdoors on glare, artifacts are print-first (ADR-0002).
 

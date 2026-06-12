@@ -4,7 +4,7 @@
  * The --pin-c custom property carries the APWA utility color — data, not
  * styling (see web/README design notes).
  */
-import type { Asset } from "@/lib/types";
+import type { Asset, Site } from "@/lib/types";
 import { UTILITY_META } from "@/lib/utility-meta";
 
 export function assetPinHtml(asset: Asset): string {
@@ -18,6 +18,10 @@ export function assetPinHtml(asset: Asset): string {
     `<span class="ub-pin-label">${asset.label}</span>` +
     `</div>`
   );
+}
+
+export function siteLabelHtml(site: Site): string {
+  return `<span class="ub-site-label" aria-hidden="true">${site.label}</span>`;
 }
 
 export function setPinActive(el: HTMLElement | undefined, active: boolean) {
