@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/*
+ * UtilityBinder brand tokens — "field ledger" design language.
+ * Warm paper neutrals, asphalt darks (sectional, not a theme), caution-amber
+ * action color, working blue. APWA utility colors live in lib/utility-meta.ts.
+ */
+@theme inline {
+  --font-sans: var(--font-barlow), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  /* Paper — the print-first canvas */
+  --color-paper: #faf8f4;
+  --color-paper-warm: #f3efe7;
+
+  /* Asphalt — sectional dark (hero / footer / "2 a.m." surfaces) */
+  --color-asphalt: #16140f;
+  --color-asphalt-2: #211e17;
+
+  /* Caution — primary action, the laminate-tape color */
+  --color-caution: #f5a623;
+  --color-caution-deep: #c97f06;
+
+  /* Working blue — links, water, trust */
+  --color-work: #1d56c0;
+  --color-work-deep: #16409a;
+
+  /* Ink ramp on paper */
+  --color-ink: #1f1b16;
+  --color-ink-soft: #57514a;
+  --color-ink-faint: #8b8478;
+}
+
+/* Light-first, print-first brand: no dark scheme override (ADR-0002 legibility).
+   Dark is compositional (asphalt sections), never a user preference. */
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01";
+}
+
+::selection {
+  background: var(--color-caution);
+  color: var(--color-asphalt);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-work);
+  outline-offset: 2px;
+}
+
+/* Plat-map linework backdrop for asphalt sections — survey-map texture. */
+.plat-grid {
+  background-image:
+    linear-gradient(to right, rgba(245, 166, 35, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 166, 35, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(250, 248, 244, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(250, 248, 244, 0.04) 1px, transparent 1px);
+  background-size:
+    160px 160px,
+    160px 160px,
+    32px 32px,
+    32px 32px;
+}
+
+/* Ledger rule — the horizontal line system used in stats and records. */
+.ledger-rule {
+  border-top: 1px solid color-mix(in srgb, var(--color-ink) 14%, transparent);
+}
+
+/* ---- Demo map: asset pins, night mode (Leaflet-injected DOM — plain CSS) ---- */
+
+.ub-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px 2px 4px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid rgba(31, 27, 22, 0.35);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(31, 27, 22, 0.25);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 120ms ease-out, box-shadow 120ms ease-out;
+}
+
+.ub-pin-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: var(--pin-c);
+  box-shadow: inset 0 0 0 1.5px rgba(31, 27, 22, 0.35);
+}
+
+.ub-pin-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
+
+.ub-pin--suspect {
+  border-style: dashed;
+}
+
+.ub-pin--active {
+  transform: translate(-50%, -50%) scale(1.18);
+  box-shadow:
+    0 0 0 2.5px var(--pin-c),
+    0 4px 12px rgba(31, 27, 22, 0.4);
+  z-index: 1000;
+}
+
+/* Night mode — "2 a.m." display: invert the drafting sheet, glow the pins. */
+.map-night {
+  background: #100f0c !important;
+}
+
+.map-night .leaflet-image-layer {
+  filter: invert(0.93) hue-rotate(190deg) saturate(0.45) brightness(1.02);
+}
+
+.map-night .ub-pin {
+  background: rgba(24, 22, 17, 0.95);
+  border-color: rgba(250, 248, 244, 0.35);
+}
+
+.map-night .ub-pin-label {
+  color: var(--color-paper);
+}
+
+.map-night .ub-pin-dot {
+  box-shadow:
+    inset 0 0 0 1.5px rgba(250, 248, 244, 0.3),
+    0 0 8px 1px var(--pin-c);
+}
+
+/* ---- Print artifact styles (ADR-0002: disclaimer/watermark structural) ---- */
+
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+.pdf-page {
+  break-after: page;
+}
+
+.pdf-watermark {
+  display: none;
+}
+
+@media print {
+  .pdf-watermark {
+    display: block;
+    position: fixed;
+    top: 45%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: rotate(-28deg);
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: rgba(120, 113, 108, 0.16);
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  .pdf-footer-band {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 8.5px;
+    color: #57534e;
+    border-top: 1px solid #d6d3d1;
+    padding-top: 4px;
+    background: white;
+  }
+
+  body {
+    background: white !important;
+  }
+}

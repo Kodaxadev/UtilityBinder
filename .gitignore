@@ -1,0 +1,24 @@
+# Dependencies / build output (web/.gitignore covers web-specific paths too)
+node_modules/
+.next/
+out/
+build/
+
+# Environment & secrets — never committed
+.env
+.env.*
+!.env.example
+*.pem
+
+# Local intake submissions (real lead data stays out of the repo)
+web/data/
+
+# Vercel local link metadata
+.vercel/
+
+# Claude Code local-only settings
+.claude/settings.local.json
+
+# OS noise
+.DS_Store
+Thumbs.db
