@@ -213,7 +213,9 @@ const eventNotes: EventNote[] = [
 export const BIG_PINE: PropertyRecord = {
   name: "Big Pine Family Campground (fictional demo)",
   // Query param versions the cached image and overlay positions together.
-  planImage: "/maps/big-pine-base-v1.png?rev=1",
+  // WebP (379 KB) replaces the original 3.4 MB PNG — this image is the
+  // demo page's LCP and the buyer is on rural mobile.
+  planImage: "/maps/big-pine-base-v1.webp?rev=2",
   planWidth: PLAN_W,
   planHeight: PLAN_H,
   sites,

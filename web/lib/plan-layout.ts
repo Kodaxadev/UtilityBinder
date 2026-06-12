@@ -1,7 +1,7 @@
 /**
  * Coordinate model for the fictional Big Pine demo map.
  *
- * The visual base is /public/maps/big-pine-base-v1.png. These positions are
+ * The visual base is /public/maps/big-pine-base-v1.webp. These positions are
  * mapped against that image so clickable targets sit on site pads beside the
  * roads, not on the roads themselves.
  */
