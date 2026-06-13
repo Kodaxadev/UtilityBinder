@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import type { Map as LeafletMap, LayerGroup, Marker, Rectangle } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { BIG_PINE, dependenciesForSite } from "@/lib/demo-data";
+import { SITE_ANGLES } from "@/lib/plan-layout";
 import { UTILITY_META } from "@/lib/utility-meta";
 import type { PlanPosition, UtilityType } from "@/lib/types";
 import { assetPinHtml, setPinActive, siteLabelHtml } from "./map-markers";
@@ -25,12 +26,10 @@ function toLatLng(p: PlanPosition): [number, number] {
 }
 
 /**
- * Label density tiers keyed off absolute CRS.Simple zoom. Far out — which is
- * where mobile's fitBounds lands (~-1.7) — the 52 site labels and 14 pin tags
- * collide into noise, so we shed them progressively: bare dots when far, pin
- * tags at mid, full labels near (desktop's fit, ~-0.95). Same imperative-class
- * pattern as night mode: Leaflet owns the container's className, so we toggle
- * individual classes and never assign className.
+ * Label density tiers keyed off absolute CRS.Simple zoom. Far out — mobile's
+ * default fit — the site chips and pin tags collide, so we shed them: bare
+ * dots when far, pin tags at mid, full labels near. Imperative-class pattern
+ * like night mode; Leaflet owns the container className, so we toggle classes.
  */
 const DENSITY_CLASSES = [
   "map-density-far",
@@ -111,7 +110,7 @@ export function EmergencyMap({
           keyboard: false,
           icon: L.divIcon({
             className: "",
-            html: siteLabelHtml(site),
+            html: siteLabelHtml(site, SITE_ANGLES[site.id] ?? 0),
             iconSize: [0, 0],
           }),
         }).addTo(map);

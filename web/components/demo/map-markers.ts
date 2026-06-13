@@ -20,8 +20,9 @@ export function assetPinHtml(asset: Asset): string {
   );
 }
 
-export function siteLabelHtml(site: Site): string {
-  return `<span class="ub-site-label" aria-hidden="true">${site.label}</span>`;
+export function siteLabelHtml(site: Site, angle = 0): string {
+  const rot = angle ? ` style="--site-rot:${angle}deg"` : "";
+  return `<span class="ub-site-label" aria-hidden="true"${rot}>${site.label}</span>`;
 }
 
 export function setPinActive(el: HTMLElement | undefined, active: boolean) {

@@ -30,34 +30,34 @@ const sites = buildSites();
 const range = (from: number, to: number): string[] =>
   Array.from({ length: to - from + 1 }, (_, i) => `site-${from + i}`);
 
-const ALL_RV_SITES = range(1, 48);
+const ALL_RV_SITES = range(1, 58);
 const CABIN_IDS = ["site-cb1", "site-cb2", "site-cb3", "site-cb4"];
 
 const assets: Asset[] = [
   {
     id: "w-01", label: "W-01", assetType: "pump", utility: "water",
-    position: { x: 332, y: 552 },
+    position: { x: 148, y: 540 },
     locationText: "Inside well house, disconnect on left wall",
     status: "active",
     provenance: prov("tested", "high", "2026-04-18", "Dave (spring opening)"),
   },
   {
     id: "v-01", label: "V-01", assetType: "valve", utility: "water",
-    position: { x: 300, y: 612 },
+    position: { x: 244, y: 506 },
     locationText: "Main shutoff, green cover 10 ft east of well house door",
     status: "active",
     provenance: prov("tested", "high", "2026-04-18", "Dave (spring opening)"),
   },
   {
     id: "v-03", label: "V-03", assetType: "valve", utility: "water",
-    position: { x: 222, y: 388 },
+    position: { x: 185, y: 318 },
     locationText: "Row A feed, valve box at NE corner of Row A road",
     status: "active",
     provenance: prov("old_map", "medium", "2025-05-02", "Dave"),
   },
   {
     id: "v-04", label: "V-04", assetType: "valve", utility: "water",
-    position: { x: 400, y: 358 },
+    position: { x: 430, y: 388 },
     locationText: "Row B feed — old map shows valve box near Row B road entrance. NOT FOUND on last walk.",
     status: "unknown",
     notes: "Candidate for verification walk. May be buried under gravel.",
@@ -65,63 +65,63 @@ const assets: Asset[] = [
   },
   {
     id: "v-07", label: "V-07", assetType: "valve", utility: "water",
-    position: { x: 656, y: 150 },
+    position: { x: 724, y: 178 },
     locationText: "Behind shed, west side of Row C — round cover under hose reel",
     status: "active",
     provenance: prov("staff_memory", "medium", "2026-06-02", "Dave + field photo"),
   },
   {
     id: "c-01", label: "C-01", assetType: "cleanout", utility: "sewer",
-    position: { x: 740, y: 500 },
+    position: { x: 1000, y: 486 },
     locationText: "Main cleanout at septic field NW corner",
     status: "active",
     provenance: prov("contractor_note", "high", "2025-11-20", "Hartley Septic invoice #2241"),
   },
   {
     id: "c-02", label: "C-02", assetType: "cleanout", utility: "sewer",
-    position: { x: 430, y: 482 },
+    position: { x: 490, y: 510 },
     locationText: "Row B line, flush cap between sites 22 and 23",
     status: "active",
     provenance: prov("field_walk", "medium", "2025-09-14", "Marcus"),
   },
   {
     id: "c-04", label: "C-04", assetType: "cleanout", utility: "sewer",
-    position: { x: 836, y: 540 },
+    position: { x: 900, y: 470 },
     locationText: "Under gravel by picnic table near site 42 — found during 2025 backup",
     status: "active",
     provenance: prov("photo", "medium", "2025-12-03", "Marcus (backup repair)"),
   },
   {
     id: "p-01", label: "P-01", assetType: "panel", utility: "electric",
-    position: { x: 208, y: 576 },
+    position: { x: 110, y: 452 },
     locationText: "Main panel, office back wall",
     status: "active",
     provenance: prov("tested", "high", "2026-05-30", "Dave"),
   },
   {
     id: "p-02", label: "P-02", assetType: "panel", utility: "electric",
-    position: { x: 822, y: 300 },
+    position: { x: 760, y: 360 },
     locationText: "Row C sub-panel on pole mid-row",
     status: "active",
     provenance: prov("tested", "high", "2026-05-30", "Dave"),
   },
   {
     id: "p-03", label: "P-03", assetType: "panel", utility: "electric",
-    position: { x: 340, y: 485 },
+    position: { x: 476, y: 288 },
     locationText: "Rows A/B sub-panel on pole between rows",
     status: "active",
     provenance: prov("staff_memory", "medium", "2025-07-04", "Dave"),
   },
   {
     id: "g-01", label: "G-01", assetType: "propane", utility: "gas",
-    position: { x: 672, y: 452 },
+    position: { x: 680, y: 100 },
     locationText: "Propane tank shutoff, east side of bathhouse",
     status: "active",
     provenance: prov("photo", "high", "2026-03-12", "Delivery driver walkthrough"),
   },
   {
     id: "ir-01", label: "IR-01", assetType: "valve", utility: "irrigation",
-    position: { x: 546, y: 426 },
+    position: { x: 540, y: 372 },
     locationText: "Old irrigation valve in common lawn — purpose unclear",
     status: "abandoned",
     notes: "Do not trust. Nobody knows what this serves or if it is live.",
@@ -129,7 +129,7 @@ const assets: Asset[] = [
   },
   {
     id: "x-01", label: "X-01", assetType: "other", utility: "unknown",
-    position: { x: 928, y: 348 },
+    position: { x: 1048, y: 330 },
     locationText: "Marker stake east of Row C — unknown buried line reported by mower crew",
     status: "unknown",
     notes: "DO NOT DIG in this area without 811 + private locator.",
@@ -145,25 +145,25 @@ const dependencies: Dependency[] = [
     notes: "Whole-park water. Shutting this kills the bathhouse too.",
   },
   {
-    id: "d-02", assetId: "v-03", relation: "controls", siteIds: range(1, 14),
+    id: "d-02", assetId: "v-03", relation: "controls", siteIds: range(9, 21),
     provenance: prov("old_map", "medium", "2025-05-02", "Dave"),
   },
   {
-    id: "d-03", assetId: "v-04", relation: "controls", siteIds: range(15, 30),
+    id: "d-03", assetId: "v-04", relation: "controls", siteIds: [...range(22, 27), ...range(42, 48)],
     provenance: prov("old_map", "low", null, "1998 paper map"),
     notes: "Never verified. If V-04 can't be found, fall back to V-01 (whole park).",
   },
   {
-    id: "d-04", assetId: "v-07", relation: "controls", siteIds: range(31, 46),
+    id: "d-04", assetId: "v-07", relation: "controls", siteIds: range(28, 41),
     provenance: prov("staff_memory", "medium", "2026-06-02", "Dave"),
-    notes: "Sites 47–48 unknown — may be teed off the Row B line instead.",
+    notes: "East side (ridge + lakeview row). Sites 40–41 at the end may tee off the south line instead — unverified.",
   },
   {
-    id: "d-05", assetId: "c-02", relation: "serves", siteIds: range(18, 26),
+    id: "d-05", assetId: "c-02", relation: "serves", siteIds: range(42, 48),
     provenance: prov("field_walk", "medium", "2025-09-14", "Marcus"),
   },
   {
-    id: "d-06", assetId: "c-04", relation: "serves", siteIds: range(40, 44),
+    id: "d-06", assetId: "c-04", relation: "serves", siteIds: [...range(39, 41), ...range(53, 58)],
     provenance: prov("photo", "medium", "2025-12-03", "Marcus"),
   },
   {
@@ -172,11 +172,11 @@ const dependencies: Dependency[] = [
     provenance: prov("contractor_note", "high", "2025-11-20", "Hartley Septic"),
   },
   {
-    id: "d-08", assetId: "p-02", relation: "feeds", siteIds: range(31, 48),
+    id: "d-08", assetId: "p-02", relation: "feeds", siteIds: [...range(28, 41), ...range(49, 58)],
     provenance: prov("tested", "high", "2026-05-30", "Dave"),
   },
   {
-    id: "d-09", assetId: "p-03", relation: "feeds", siteIds: range(1, 30),
+    id: "d-09", assetId: "p-03", relation: "feeds", siteIds: [...range(1, 27), ...range(42, 48)],
     provenance: prov("staff_memory", "medium", "2025-07-04", "Dave"),
   },
   {
