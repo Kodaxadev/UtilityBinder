@@ -3,6 +3,7 @@
 **Status:** Accepted
 **Date:** 2026-06-11
 **Evidence:** [ADR-0002](ADR-0002-liability-posture-not-a-locate.md); brainstorm's model audit (Site/Asset/Dependency/EventNote) extended after review
+**Detailed schema:** [docs/spec/data-model.md](../spec/data-model.md) — the field-level realization (canonical for fields, enums, keys, and exports; resolves drift since this ADR)
 
 ## Context
 
