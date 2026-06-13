@@ -168,6 +168,38 @@ body {
   color: var(--color-paper);
 }
 
+/* Zoom density — shed labels when the plan is far out (mobile's default fit)
+   so the 52 site labels + 14 pin tags don't collide, then reveal them on
+   zoom-in. Toggled by EmergencyMap's zoomend listener. Placed after night mode
+   so visibility wins in both modes; the dot's box-shadow is left untouched so
+   the night glow survives the collapse. */
+
+/* Far: collapse pins to bare dots, drop all text. */
+.map-density-far .ub-site-label,
+.map-density-far .ub-pin-label {
+  display: none;
+}
+
+.map-density-far .ub-pin {
+  gap: 0;
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.map-density-far .ub-pin-dot {
+  width: 12px;
+  height: 12px;
+}
+
+/* Mid: pin tags return; site labels stay suppressed to cut clutter. */
+.map-density-mid .ub-site-label {
+  display: none;
+}
+
+/* Near: nothing hidden — default styles apply. */
+
 /* ---- Print artifact styles (ADR-0002: disclaimer/watermark structural) ---- */
 
 @page {

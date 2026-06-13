@@ -24,6 +24,31 @@ function toLatLng(p: PlanPosition): [number, number] {
   return [BIG_PINE.planHeight - p.y, p.x];
 }
 
+/**
+ * Label density tiers keyed off absolute CRS.Simple zoom. Far out — which is
+ * where mobile's fitBounds lands (~-1.7) — the 52 site labels and 14 pin tags
+ * collide into noise, so we shed them progressively: bare dots when far, pin
+ * tags at mid, full labels near (desktop's fit, ~-0.95). Same imperative-class
+ * pattern as night mode: Leaflet owns the container's className, so we toggle
+ * individual classes and never assign className.
+ */
+const DENSITY_CLASSES = [
+  "map-density-far",
+  "map-density-mid",
+  "map-density-near",
+] as const;
+
+function densityClassForZoom(zoom: number): (typeof DENSITY_CLASSES)[number] {
+  if (zoom < -1.3) return "map-density-far";
+  if (zoom < -1.0) return "map-density-mid";
+  return "map-density-near";
+}
+
+function applyDensity(el: HTMLElement, zoom: number) {
+  const target = densityClassForZoom(zoom);
+  for (const cls of DENSITY_CLASSES) el.classList.toggle(cls, cls === target);
+}
+
 export function EmergencyMap({
   selectedSiteId,
   selectedAssetId,
@@ -64,6 +89,10 @@ export function EmergencyMap({
       });
       L.imageOverlay(BIG_PINE.planImage, bounds).addTo(map);
       map.fitBounds(bounds);
+      applyDensity(containerRef.current, map.getZoom());
+      map.on("zoomend", () => {
+        if (containerRef.current) applyDensity(containerRef.current, map.getZoom());
+      });
 
       // Site hit targets sit on the visible pads in the base image.
       for (const site of BIG_PINE.sites) {
