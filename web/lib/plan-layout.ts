@@ -73,7 +73,7 @@ const CABINS: Site[] = [
   { id: "site-cb1", label: "CB1", area: "Cabins", position: { x: 588, y: 142 } },
   { id: "site-cb2", label: "CB2", area: "Cabins", position: { x: 432, y: 222 } },
   { id: "site-cb3", label: "CB3", area: "Cabins", position: { x: 254, y: 534 } },
-  { id: "site-cb4", label: "CB4", area: "Cabins", position: { x: 586, y: 588 } },
+  { id: "site-cb4", label: "CB4", area: "Cabins", position: { x: 562, y: 564 } },
 ];
 
 function makeSites(area: string, seeds: readonly SiteSeed[]): Site[] {
